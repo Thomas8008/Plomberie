@@ -1,0 +1,556 @@
+/* Scrollbar */
+
+body {
+    --sb-track-color: #232E33;
+    --sb-thumb-color: #b1b18c;
+    --sb-size: 6px;
+   
+  }
+  
+  body::-webkit-scrollbar {
+    inline-size: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 50px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 50px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+
+
+/* Navbar*/
+
+
+/* --------------------------------------------------------------------------------- */
+
+
+/* import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import 'animate.css';
+
+
+
+
+  /* Section1 */
+  .presentations{
+    
+    inline-size: 644px;
+    block-size: 132px;
+    margin-block-start: 8%;
+    margin-inline-start: -9%;
+    color: #ffffffaf;
+  }
+
+
+.présentations1{
+font-size: 14px;
+font-weight: bold;
+
+}
+  
+
+.pourquoi{
+
+  margin-block-start: 2%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: rgb(51, 51, 51);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hrapropos{
+ color: rgb(110, 62, 28); /* Arrière-plan marron subtil */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 14%;
+margin-inline-start: 43%;
+
+border-width: 2px;
+font-weight: bold;
+  
+}
+.text-icons{
+  white-space: nowrap;
+  margin-inline-start: 5%;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: -5%;
+}
+
+.img4 , .img2{
+  margin-inline-start: -70%;
+}
+
+.img1 , .img3{
+  margin-inline-start: -20%;
+}
+
+
+
+.section1 {
+  background-color: rgb(255, 255, 255);
+  block-size: 700px;
+  padding-block-start: 1%;
+  background-image: url(../img/2305.w064.n002.147B.p1.147.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
+  background-attachment: scroll;
+  background-attachment: fixed; 
+  
+ 
+}
+
+
+
+.hr1{
+  inline-size: 84%;
+  margin-block-start: 8ch;
+margin-inline-start: 10%;
+color: #000000;
+border-width: 4px;
+font-weight: bold;
+}
+
+/* section1bis */
+/* Styles spécifiques à la section */
+.section1bis {
+  
+  padding: 0px 0;
+  block-size: 600px;
+}
+
+/* Grille d'icônes */
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Aligner les icônes en haut */
+  margin-block-start: 30px;
+  margin: 10%;
+}
+
+/* Conteneur d'icône */
+.icon-container {
+  flex: 1;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 15%;
+
+}
+
+/* Titre d'icône */
+.icon-title {
+  margin-block-start: 20%; /* Marge vers le haut */
+  margin-block-end: 5px; /* Marge vers le bas */
+  font-size: 18px; /* Taille de la police */
+  margin-left: -5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Icône */
+/* Icône */
+.icon {
+  inline-size: 80px;
+  block-size: 80px;
+  border-radius: 50%;
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, background-color 0.3s; /* Ajouter la transition pour l'échelle et la couleur de fond */
+}
+
+/* Effet de mise à l'échelle au survol */
+.icon:hover {
+  transform: scale(1.1); /* Mise à l'échelle de 10% supplémentaire */
+  background-color: rgba(110, 62, 28, 0.301); /* Arrière-plan marron subtil */
+}
+
+/* Image d'icône */
+.icon-img {
+  max-inline-size: 50px;
+  max-block-size: 50px;
+}
+
+/* Texte d'icône */
+.icon-text {
+  margin-block-start: 8%; /* Marge vers le haut */
+  margin-block-end: 20px; /* Marge vers le bas */
+}
+
+
+
+.hrservices{
+  color: rgb(110, 62, 28); /* Arrière-plan marron subtil */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 14%;
+margin-inline-start: 43%;
+
+border-width: 2px;
+font-weight: bold;
+}
+
+
+/* --------------------------------------------------------------------------------- */
+
+
+/* section2 */
+
+.section2{
+  
+  block-size: 400%;
+  padding-block-start: 1%;
+/* Couleur de fond */
+  
+  padding: 50px 0; /* Espacement intérieur */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: scroll;
+  background-attachment: fixed; 
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+
+.title-margin {
+  margin-bottom: 200px;
+}
+
+.row-margin {
+  margin-bottom: 300px;
+}
+
+.row-margin1 {
+  margin-bottom: 300px;
+}
+.column-margin {
+  margin-bottom: 50px;
+}
+
+.text-margin {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#leftcolumn1{
+  margin-left: 200px;
+}
+
+#leftColumn3{
+  margin-left: -50px;
+
+}
+
+#leftColumn5{
+  margin-left: -50px;
+}
+#rightColumn2{
+  margin-left: 80px;
+}
+
+.image-margin {
+  margin-left: 80px;
+}
+
+#rightColumn4{
+  margin-left: 80px;
+}
+
+.image-margin1 {
+  margin-left: -80px;
+}
+
+/* section 3 */
+
+.section3 {
+  position: relative;
+  height: 1000px;
+  justify-content: center; /* Centrer les éléments horizontalement */
+  align-items: center; /* Centrer les éléments verticalement */
+width: 100%;
+padding: 0 10px;
+}
+
+
+
+
+h1 {
+  color: brown;
+  margin-bottom: 10px;
+  
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+hr {
+  border-color: brown;
+}
+
+
+.h1gallery{
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+
+
+
+
+
+.hrgallery{
+  color: rgb(110, 62, 28); /* Arrière-plan marron subtil */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 14%;
+margin-inline-start: 43%;
+
+border-width: 2px;
+font-weight: bold;
+}
+
+
+
+
+
+
+
+.full-gallery {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 70%;
+  max-width: 1170px;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: Arial;
+}
+.image-gallery {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.image-gallery .gallery-items {
+  margin: 15px;
+  width: 300px;
+  height: 300px;
+  background-color: #7c4f2459;
+  border-radius: 50%;
+  cursor: zoom-in;
+  
+  transition: background-color 0.25s ease;
+}
+
+.image-gallery .gallery-items .item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+.gallery-items:hover .item {
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+.image-gallery .gallery-items .item img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.25s ease;
+}
+.item:hover img {
+  transform: scale(1.08)
+}
+.image-gallery .gallery-items .item .item-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.image-gallery .gallery-items .item .transparent-back {
+  position: absolute;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+.image-gallery .gallery-items .item .transparent-back:hover {
+  opacity: 0;
+  animation: 0.25s fade-back forwards ease;
+}
+@keyframes fade-back {
+  0% { opacity: 0; }
+  100% { opacity: 0.5; }
+}
+.item-title .title-text > p:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  font-size: 1.5em;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-500%);
+  color: #ffffff;
+  opacity: 0;
+  text-align: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.item-title:hover .title-text > p:nth-child(1) {
+  transform: translateX(-50%) translateY(-60%);
+  opacity: 1;
+}
+.title-text > p:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  font-size: 1em;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(500%);
+  color: #cccccc;
+  opacity: 0;
+  text-align: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.item-title:hover .title-text > p:nth-child(2) {
+  transform: translateX(-50%) translateY(60%);
+  opacity: 1;
+}
+
+
+/* Style pour le modal */
+.modal {
+  display: none; /* Masquer par défaut */
+  position: fixed; /* Position fixe */
+  z-index: 9999; /* Mettre au-dessus de tout le contenu */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largeur pleine largeur */
+  height: 100%; /* Hauteur pleine largeur */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond noir légèrement transparent */
+  overflow: auto; /* Pour faire défiler quand nécessaire */
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 960px; /* Largeur maximale */
+  max-height: 720px; /* Hauteur maximale */
+  width: 100%; /* Forcer à remplir la largeur */
+  height: auto; /* Ajuster la hauteur en fonction de la largeur */
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hrimage{
+  inline-size: 84%;
+  margin-block-start: 105ch;
+margin-inline-start: 10%;
+color: #000000;
+border-width: 4px;
+font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+@media (max-width: 767px) {
+    .section2 .container {
+        
+        margin-top: 200%;
+    }
+  
+    .image-margin{
+    margin-left: -1%;
+}
+.image-margin1{
+    margin-left: -1%;
+}
+
+.row-margin1{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#rightColumn2{
+    margin-left: -1%;
+}
+#leftColumn3{
+    margin-left: -1%;
+}
+
+#rightColumn4{
+    margin-left: -1%;
+}
+
+#leftColumn5{
+    margin-left: -1%; 
+}
+
+.section3{
+   
+}
+
+.hrimage{
+  margin-top: 160%;
+}
+
+.titrepage{
+    margin-top: 30%;
+}
+
+
+}
+
+

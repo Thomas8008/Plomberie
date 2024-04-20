@@ -229,11 +229,10 @@ font-weight: bold;
 /* section2 */
 
 .section2{
-  
   block-size: 400%;
   padding-block-start: 1%;
 /* Couleur de fond */
-  
+ background-image: url(../img/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg);
   padding: 50px 0; /* Espacement intérieur */
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -250,6 +249,7 @@ font-weight: bold;
   opacity: 1;
 }
 
+.container{}
 
 .title-margin {
   margin-bottom: 200px;
@@ -272,7 +272,7 @@ font-weight: bold;
 }
 
 #leftcolumn1{
-  margin-left: 200px;
+  margin-left: -200px;
 }
 
 #leftColumn3{

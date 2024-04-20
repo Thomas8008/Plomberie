@@ -1,86 +1,96 @@
-@media (max-width: 767px) {
-    .section2 .container-fluid {
-        position: static;
-        margin-top: 250%; /* Ajustez ce pourcentage selon vos besoins */
+/* Pour tous les points de rupture */
 
+
+/* Pour les écrans jusqu'à 767px de largeur */
+@media (max-width: 767px) {
+    .section2 {
+        margin-top: 180%;
     }
-  
-    .image-margin {
-        margin-left: -1%;
-    }
-    .image-margin1 {
-        margin-left: -1%;
-    }
-    .row-margin1 {
-        display: flex;
-        flex-direction: column-reverse;
-    }
+    .image-margin,
+    .image-margin1,
     #rightColumn2,
     #leftColumn3,
     #rightColumn4,
     #leftColumn5 {
         margin-left: -1%; 
     }
-    .hrimage {
-        margin-top: 160%;
+    .row-margin1 {
+        display: flex;
+        flex-direction: column-reverse;
     }
- 
-
-
+    .hrimage {
+        margin-top: 700%;
+    }
 }
-@media (max-width: 1310px){
-    .presentations{
-    
-  
+
+/* Pour les écrans jusqu'à 1310px de largeur */
+@media (max-width: 1310px) {
+    .presentations {
         block-size: 132px;
         margin-block-start: 8%;
         margin-left: 30%;
         color: #ffffffaf;
-      }
-    
-    .hrhead{
-      width: 60%;
-      
-   
     }
-      
-    .présentations1{
-    font-size: 14px;
-    font-weight: bold;
-    width: 45%;
-    color: #ffffffaf;
-    margin-left: 30%;
-    
-    justify-content: center;
-    align-items: center;
+    .hrhead {
+        width: 60%;
+    }
+    .présentations1 {
+        font-size: 14px;
+        font-weight: bold;
+        width: 45%;
+        color: #ffffffaf;
+        margin-left: 30%;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-
-@media (max-width: 647px) {
-.presentation1{
-    height: 20%;
+/* Pour les écrans jusqu'à 659px de largeur */
+@media (max-width: 698px) {
+    .presentation1 {
+        height: 20%;
+    }
+    .section2 {
+        margin-top: 210%;
+        max-width: 100%;
+    }
 }
-}
+@media (max-width: 610px) {
 
-@media (max-width: 470px) {
-    .section2 .container-fluid {
+    .section2 {
         position: static;
-        margin-top: 300%; /* Ajustez ce pourcentage selon vos besoins */
+        margin-top: 215%;
+    }
+}
+/* Pour les écrans jusqu'à 470px de largeur */
+@media (max-width: 587px) {
+    .section2 {
+        position: static;
+        margin-top: 235%;
     }
 }
 
-@media (max-width: 370px) {
-    .section2 .container-fluid {
+/* Pour les écrans jusqu'à 370px de largeur */
+@media (max-width: 530px) {
+    .section2 {
         position: static;
-        margin-top: 350%; /* Ajustez ce pourcentage selon vos besoins */
+        margin-top: 250%;
     }
 }
 
-@media (max-width: 314px) {
-    .section2 .container-fluid {
+@media (max-width: 461px) {
+    .section2 {
         position: static;
-        margin-top: 400%; /* Ajustez ce pourcentage selon vos besoins */
+        margin-top: 270%;
     }
 }
+
+/* Pour les écrans jusqu'à 314px de largeur */
+@media (max-width: 396px) {
+    .section2 {
+        position: static;
+        margin-top: 300%;
+    }
+}
+
 

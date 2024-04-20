@@ -47,18 +47,23 @@ body {
   /* Section1 */
   .presentations{
     
-    inline-size: 644px;
+   
     block-size: 132px;
     margin-block-start: 8%;
-    margin-inline-start: -9%;
+    margin-left: 20%;
     color: #ffffffaf;
   }
 
-
+.hrhead{
+  width: 45%;
+}
+  
 .présentations1{
 font-size: 14px;
 font-weight: bold;
-
+width: 45%;
+color: #ffffffaf;
+margin-left: 20%;
 }
   
 

@@ -1,49 +1,86 @@
 @media (max-width: 767px) {
-    .section2 .container {
-        
-        margin-top: 200%;
+    .section2 .container-fluid {
+        position: static;
+        margin-top: 250%; /* Ajustez ce pourcentage selon vos besoins */
+
     }
   
-    .image-margin{
-    margin-left: -1%;
-}
-.image-margin1{
-    margin-left: -1%;
-}
+    .image-margin {
+        margin-left: -1%;
+    }
+    .image-margin1 {
+        margin-left: -1%;
+    }
+    .row-margin1 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #rightColumn2,
+    #leftColumn3,
+    #rightColumn4,
+    #leftColumn5 {
+        margin-left: -1%; 
+    }
+    .hrimage {
+        margin-top: 160%;
+    }
+ 
 
-.row-margin1{
-    display: flex;
-    flex-direction: column-reverse;
-}
 
-#rightColumn2{
-    margin-left: -1%;
 }
-#leftColumn3{
-    margin-left: -1%;
-}
-
-#rightColumn4{
-    margin-left: -1%;
-}
-
-#leftColumn5{
-    margin-left: -1%; 
-}
-
-.section3{
+@media (max-width: 1310px){
+    .presentations{
+    
+  
+        block-size: 132px;
+        margin-block-start: 8%;
+        margin-left: 30%;
+        color: #ffffffaf;
+      }
+    
+    .hrhead{
+      width: 60%;
+      
    
+    }
+      
+    .présentations1{
+    font-size: 14px;
+    font-weight: bold;
+    width: 45%;
+    color: #ffffffaf;
+    margin-left: 30%;
+    
+    justify-content: center;
+    align-items: center;
+    }
 }
 
-.hrimage{
-  margin-top: 160%;
+
+@media (max-width: 647px) {
+.presentation1{
+    height: 20%;
+}
 }
 
-.titrepage{
-    margin-top: 30%;
+@media (max-width: 470px) {
+    .section2 .container-fluid {
+        position: static;
+        margin-top: 300%; /* Ajustez ce pourcentage selon vos besoins */
+    }
 }
 
-
+@media (max-width: 370px) {
+    .section2 .container-fluid {
+        position: static;
+        margin-top: 350%; /* Ajustez ce pourcentage selon vos besoins */
+    }
 }
 
+@media (max-width: 314px) {
+    .section2 .container-fluid {
+        position: static;
+        margin-top: 400%; /* Ajustez ce pourcentage selon vos besoins */
+    }
+}
 

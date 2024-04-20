@@ -28,15 +28,28 @@ require("database.inc.php");
 <section class="section1" id="section1">
   <nav></nav>
   <header>
-<div class="container titrepage">
-  <h1 class="presentations">
-    Qui suis-je ?
-    <hr style="color: brown;"> 
-    <p class="présentations1">
-    Cumulant quarante ans d'expérience dans le domaine, j'ai acquis mon savoir-faire en plomberie et chauffage au fil des années passées au sein de différentes entreprises. <br><br>
-    Grâce à ces expériences variées, j'ai développé une solide connaissance du métier. <br> En 2013, après des années de travail, j'ai décidé de créer ma propre entreprise de plomberie et de chauffage. ,C'était le moment pour moi de mettre à profit toute cette expérience accumulée ,et de proposer directement mes services aux clients. <br><br> Cela représente l'aboutissement de nombreuses années d'apprentissage et de travail, me permettant désormais de mettre en pratique mes compétences pour offrir le meilleur service à mes clients.</p>
-  </h1> 
-  </div>
+    <div class="container-fluid titrepage" style="overflow-x: hidden;">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="presentations">
+            Qui suis-je ?
+            <hr class="hrhead" style="color: brown;"> 
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="max-height: 300px; overflow-y: auto;">
+          <p class="présentations1">
+            Cumulant quarante ans d'expérience dans le domaine, j'ai acquis mon savoir-faire en plomberie et chauffage au fil des années passées au sein de différentes entreprises. <br><br>
+            Grâce à ces expériences variées, j'ai développé une solide connaissance du métier. <br> En 2013, après des années de travail, j'ai décidé de créer ma propre entreprise de plomberie et de chauffage. ,C'était le moment pour moi de mettre à profit toute cette expérience accumulée ,et de proposer directement mes services aux clients. <br><br> Cela représente l'aboutissement de nombreuses années d'apprentissage et de travail, me permettant désormais de mettre en pratique mes compétences pour offrir le meilleur service à mes clients.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+
 </h1>
 </section>
 <section class="section1bis">
@@ -96,8 +109,8 @@ require("database.inc.php");
 
 
 
-<section class="section2" id="section2">
-  <div class="container">
+<section class="container section2" id="section2">
+  <div class="container-fluid">
     <h1 class="text-center title-margin" style="font-family: 'Poppins', sans-serif;">Mes Services Proposés
       <hr class="hrservices">
     </h1>

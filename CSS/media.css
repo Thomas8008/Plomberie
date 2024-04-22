@@ -186,6 +186,18 @@
       .présentations1{
 color: #000;
       }
+
+      .contact-bio {
+       width: 400px; /* Ajustement de la taille de la police */
+      }
+    
+      .contact-info .contact-description {
+       height: 10px; /* Ajustement de la taille de la police */
+      }
+    
+      .contact-social.email.show .contact-detail p {
+        width: 100px; /* Ajustement de la taille de la police */
+      }
   }
   
   
@@ -193,3 +205,111 @@ color: #000;
   
   
   
+  @media screen and (min-width: 768px) and (max-width: 1669px){
+
+    .card{
+        margin-left: 50%;
+        position: relative;
+    }
+
+    .titrehoraire{
+        margin-left: 50%;
+    }
+
+    .présentations1{
+        margin-left: 50%;
+    }
+    .presentations{
+       margin-left: 50%;
+    }
+
+    .hrhorraire{
+        width: 120%;
+    }
+
+    .hrhead{
+        width: 120%;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1634px){
+
+    .card{
+        margin-left: 50%;
+        position: relative;
+    }
+
+    .titrehoraire{
+        margin-left: 50%;
+    }
+
+    .présentations1{
+        margin-left: 50%;
+    }
+    .presentations{
+       margin-left: 50%;
+    }
+
+    .hrhorraire{
+        width: 120%;
+    }
+
+    .hrhead{
+        width: 120%;
+    }
+  }
+
+
+  @media screen and (min-width: 768px) and (max-width: 1669px){
+
+    .card{
+        margin-left: 50%;
+        position: relative;
+    }
+
+    .titrehoraire{
+        margin-left: 50%;
+    }
+
+    .présentations1{
+        margin-left: 50%;
+    }
+    .presentations{
+       margin-left: 50%;
+    }
+
+    .hrhorraire{
+        width: 120%;
+    }
+
+    .hrhead{
+        width: 120%;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1634px) {
+
+    .card{
+        margin-left: 50%;
+        position: relative;
+    }
+
+    .titrehoraire{
+        margin-left: 50%;
+    }
+
+    .présentations1{
+        margin-left: 50%;
+    }
+    .presentations{
+       margin-left: 50%;
+    }
+
+    .hrhorraire{
+        width: 120%;
+    }
+
+    .hrhead{
+        width: 120%;
+    }
+  }

@@ -94,3 +94,102 @@
 }
 
 
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+.section4 {
+  padding-block-start: 1%;
+  background-image: url(../img/5636276.jpg);
+  padding: 50px 0; /* Espacement intérieur */
+  background-repeat: no-repeat;
+  background-size: cover; /* Utilisation de cover pour ajuster la taille de l'image de fond */
+  background-attachment: fixed;
+  block-size: 14000px;
+  margin-top: 430%;
+  overflow: hidden; /* Masquer tout contenu qui dépasse */
+}
+    
+    .contact-container {
+      display: block;
+      margin: 5% auto;
+      inline-size: 90%;
+    }
+    
+    .contact-card {
+      inline-size: 100%;
+      margin-block-start: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; /* Affichage vertical pour les cartes */
+    }
+    
+    .presentations, .titrehoraire {
+      margin-inline-start: 5%;
+    }
+    
+    .card {
+      position: relative;
+      width: 90%; /* Ajustement de la largeur de la carte */
+      margin-top: 400%; /* Ajustement de la marge supérieure */
+      margin-left: auto; /* Centrage horizontal */
+      margin-right: auto; /* Centrage horizontal */
+      border: 3px double red;
+      justify-content: center;
+    }
+    
+    /* Réduction de la taille des détails de contact */
+    .contact-detail {
+      font-size: 12px; /* Réduction de la taille de la police */
+      margin-top: 5px; /* Espacement entre les détails */
+      width: 100%; /* Ajustement de la largeur des détails */
+    }
+    
+    .contact-detail h4,
+    .contact-detail p,
+    .contact-detail a {
+      text-align: center; /* Centrage du texte */
+      margin: 5px 0; /* Espacement autour du texte */
+    }
+    
+    .contact-detail a {
+      display: block;
+      margin-top: 10px; /* Espacement entre les boutons */
+      width: 100%; /* Ajustement de la largeur des boutons */
+      text-align: center; /* Centrage du texte à l'intérieur des boutons */
+      line-height: 50px; /* Centrage vertical du texte dans les boutons */
+    }
+  
+    .btn2,
+    .btn3,
+    .btn4 {
+      display: inline-block;
+      text-align: center;
+      outline: none;
+      cursor: pointer;
+      inline-size: 100%; /* Ajustement de la largeur des boutons */
+      block-size: 50px;
+      background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+      border-radius: 30px;
+      border: 1px solid #8F9092;
+      transition: all 0.2s ease;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #606060;
+      text-shadow: 0 1px #fff;
+      text-decoration: none;
+    }
+    .presentations, .titrehoraire {
+        margin-inline-start: 5%;
+        color: black;
+      }
+      .présentations1{
+color: #000;
+      }
+  }
+  
+  
+  
+  
+  
+  

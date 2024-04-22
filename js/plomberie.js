@@ -122,3 +122,9 @@ sections.forEach(section => {
 
 // contact
 
+document.querySelector(".contact-btn").addEventListener("click", () => {
+  document.querySelector(".contact-card").classList.toggle("change");
+  document.querySelectorAll(".contact-social").forEach((social) => {
+    social.classList.toggle("show");
+  });
+});

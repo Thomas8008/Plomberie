@@ -2,7 +2,7 @@
 
 
 /* Pour les écrans jusqu'à 767px de largeur */
-@media (max-width: 767px) {
+@media all and (max-width: 767px) {
     .section2 {
         margin-top: 180%;
     }
@@ -21,32 +21,31 @@
     .hrimage {
         margin-top: 700%;
     }
+    .contact-social.email.show .contact-detail p {
+        display: none;
+    }
+    .contact-social.phone.show .contact-detail p {
+        display: none;
+    }
+    .contact-social.facebook.show .contact-detail p {
+        display: none;
+    }
+
+    .contact-social.email p{
+        display: none;
+    }
+    .contact-social.phone p{
+        display: none;
+    }
+    .contact-social.facebook p{
+        display: none;
+    }
 }
 
-/* Pour les écrans jusqu'à 1310px de largeur */
-@media (max-width: 1310px) {
-    .presentations {
-        block-size: 132px;
-        margin-block-start: 8%;
-        margin-left: 30%;
-        color: #ffffffaf;
-    }
-    .hrhead {
-        width: 60%;
-    }
-    .présentations1 {
-        font-size: 14px;
-        font-weight: bold;
-        width: 45%;
-        color: #ffffffaf;
-        margin-left: 30%;
-        justify-content: center;
-        align-items: center;
-    }
-}
+
 
 /* Pour les écrans jusqu'à 659px de largeur */
-@media (max-width: 698px) {
+@media all and (max-width: 698px) {
     .presentation1 {
         height: 20%;
     }
@@ -55,7 +54,7 @@
         max-width: 100%;
     }
 }
-@media (max-width: 610px) {
+@media all and (max-width: 610px) {
 
     .section2 {
         position: static;
@@ -63,7 +62,7 @@
     }
 }
 /* Pour les écrans jusqu'à 470px de largeur */
-@media (max-width: 587px) {
+@media all and (max-width: 587px) {
     .section2 {
         position: static;
         margin-top: 235%;
@@ -71,14 +70,14 @@
 }
 
 /* Pour les écrans jusqu'à 370px de largeur */
-@media (max-width: 530px) {
+@media all and (max-width: 530px) {
     .section2 {
         position: static;
         margin-top: 250%;
     }
 }
 
-@media (max-width: 461px) {
+@media all and (max-width: 461px) {
     .section2 {
         position: static;
         margin-top: 270%;
@@ -86,7 +85,7 @@
 }
 
 /* Pour les écrans jusqu'à 314px de largeur */
-@media (max-width: 396px) {
+@media all and (max-width: 396px) {
     .section2 {
         position: static;
         margin-top: 300%;
@@ -94,7 +93,7 @@
 }
 
 
-@media screen and (min-width: 360px) and (max-width: 767px) {
+@media all and (min-width: 360px) and (max-width: 767px) {
 
 .section4 {
   padding-block-start: 1%;
@@ -205,34 +204,7 @@ color: #000;
   
   
   
-  @media screen and (min-width: 768px) and (max-width: 1669px){
-
-    .card{
-        margin-left: 50%;
-        position: relative;
-    }
-
-    .titrehoraire{
-        margin-left: 50%;
-    }
-
-    .présentations1{
-        margin-left: 50%;
-    }
-    .presentations{
-       margin-left: 50%;
-    }
-
-    .hrhorraire{
-        width: 120%;
-    }
-
-    .hrhead{
-        width: 120%;
-    }
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1634px){
+  @media all and (min-width: 768px) and (max-width: 1669px){
 
     .card{
         margin-left: 50%;
@@ -260,56 +232,35 @@ color: #000;
   }
 
 
-  @media screen and (min-width: 768px) and (max-width: 1669px){
 
-    .card{
-        margin-left: 50%;
-        position: relative;
+  @media all and (min-width: 768px) and (max-width: 1634px) {
+    .section4,
+    .container {
+        width: 100%;
+        text-align: center;
     }
-
-    .titrehoraire{
-        margin-left: 50%;
+    
+    .card {
+        width: auto;
     }
-
-    .présentations1{
-        margin-left: 50%;
+    
+    .hrhorraire, .hrhead {
+        width: auto;
+        height: auto;
     }
-    .presentations{
-       margin-left: 50%;
-    }
-
-    .hrhorraire{
-        width: 120%;
-    }
-
-    .hrhead{
-        width: 120%;
-    }
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1634px) {
-
-    .card{
-        margin-left: 50%;
-        position: relative;
+    
+    .contact-bio {
+        width: auto; /* Ajustement automatique de la largeur */
+        max-width: 100%;
+        max-height: 100%;
+        
     }
 
-    .titrehoraire{
-        margin-left: 50%;
+    .contact-detail {
+        font-size: 14px; /* Réduire la taille de la police */
     }
-
-    .présentations1{
-        margin-left: 50%;
+        .contact-social,
+    .contact-detail {
+        max-width: 100%; /* Ajuster la largeur en fonction de vos besoins */
     }
-    .presentations{
-       margin-left: 50%;
-    }
-
-    .hrhorraire{
-        width: 120%;
-    }
-
-    .hrhead{
-        width: 120%;
-    }
-  }
+}

@@ -229,14 +229,22 @@ color: #000;
     .hrhead{
         width: 120%;
     }
+    .contact-bio {
+      left: -10%;
+        
+    }
+    .contact-social{
+       margin-left: -10%;
+       width: 100%;
   }
 
 
 
-  @media all and (min-width: 768px) and (max-width: 1634px) {
+  @media all and (max-width: 1634px) {
     .section4,
     .container {
         width: 100%;
+        align-items: center;
         text-align: center;
     }
     
@@ -250,17 +258,174 @@ color: #000;
     }
     
     .contact-bio {
-        width: auto; /* Ajustement automatique de la largeur */
+        width: 500px; /* Ajustement automatique de la largeur */
         max-width: 100%;
         max-height: 100%;
-        
+        margin-left: 6%;
     }
 
-    .contact-detail {
-        font-size: 14px; /* Réduire la taille de la police */
+    .contact-social,
+    .c0ontact-details {
+        max-width: 75%; 
+        margin-left: -3%;
     }
-        .contact-social,
-    .contact-detail {
-        max-width: 100%; /* Ajuster la largeur en fonction de vos besoins */
+    
+    .contact-social.email.show .contact-detail p,
+    .contact-social.phone.show .contact-detail p,
+    .contact-social.facebook.show .contact-detail p {
+        display: none;
+    }
+
+    .btn2 {
+        margin-left: 120%;
+    }
+    
+    .btn4 {
+        margin-left: 120%;
+    }
+    
+    .btn2, .btn3, .btn4 {
+        margin-top: -30%;
+    }
+
+    .contact-social.email.show .contact-detail p,
+    .contact-social.phone.show .contact-detail p,
+    .contact-social.facebook.show .contact-detail p {
+        display: none;
+    }
+
+    .contact-social.email p,
+    .contact-social.phone p,
+    .contact-social.facebook p {
+        display: none;
     }
 }
+
+
+@media all and (max-width: 1634px) {
+    .section4,
+    .container {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .card {
+        width: auto;
+    }
+    
+    .hrhorraire, .hrhead {
+        width: auto;
+        height: auto;
+    }
+    
+    .contact-bio {
+        width: 500px; /* Ajustement automatique de la largeur */
+        max-width: 100%;
+        max-height: 100%;
+        margin-left: -5%;
+    }
+
+    .contact-social,
+    .c0ontact-details {
+        max-width: 75%; 
+        margin-left: -14%;
+    }
+    
+    .contact-social.email.show .contact-detail p,
+    .contact-social.phone.show .contact-detail p,
+    .contact-social.facebook.show .contact-detail p {
+        display: none;
+    }
+
+    .btn2 {
+        margin-left: 120%;
+    }
+    
+    .btn4 {
+        margin-left: 120%;
+    }
+    
+    .btn2, .btn3, .btn4 {
+        margin-top: -30%;
+    }
+
+    .contact-social.email.show .contact-detail p,
+    .contact-social.phone.show .contact-detail p,
+    .contact-social.facebook.show .contact-detail p {
+        display: none;
+    }
+
+    .contact-social.email p,
+    .contact-social.phone p,
+    .contact-social.facebook p {
+        display: none;
+    }
+}}
+@media all and (max-width: 1360px) {
+    .section4 {
+      height: 2100px; /* Ajustez la hauteur en automatique pour s'adapter au contenu */
+      display: flex;
+      flex-direction: column; /* Mettez les éléments en colonne */
+      align-items: center; /* Centre les éléments horizontalement */
+      text-align: center;
+    }
+  
+    .section4 .container {
+      margin-left: 10%;
+      
+    }
+      
+    .s4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-left: -50%;
+      
+    }
+  
+    .contact-bio,
+    .contact-card {
+      width: 100%; /* Ajustez la largeur selon vos besoins */
+      max-width: 100%; /* Ajustez la largeur maximale à 100% */
+      padding: 20px; /* Ajustez selon vos besoins */
+      border-radius: 10px; /* Ajustez selon vos besoins */
+      margin-top: 170%;
+      margin-left: 33%;
+    }
+
+ .contact-social {
+    margin-left: 35%;
+    max-width: 120%px; /* Ajustez la largeur maximale en pixels selon vos besoins */
+}
+
+
+/* Styles pour les boutons */
+.contact-social a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px; /* Espace entre les boutons */
+  margin-left: 1%;
+}
+
+    
+    .h1ethr {
+      margin-left: 25%;
+      width: 100%;
+    }
+    
+    .titrehoraire {
+      margin-bottom: 20px; /* Ajustez selon vos besoins */
+    }
+  
+    .titrehoraire,
+    .card {
+      width: 100%; /* Assurez-vous que la largeur est à 100% pour s'adapter à la colonne */
+      max-width: 500px; /* Ajustez selon vos besoins */
+    }
+}
+
+  

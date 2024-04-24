@@ -555,6 +555,7 @@ font-weight: bold;
   inline-size: 40rem;
   position: relative;
   margin-block-start: 37%;
+  left: 50%;
 }
 
 .contact-bio {
@@ -564,6 +565,7 @@ font-weight: bold;
   border-radius: 0.5rem;
   position: relative;
   z-index: 100;
+  
 }
 
 .contact-img-wrapper {
@@ -649,13 +651,14 @@ font-weight: bold;
   margin-inline-start: -20%;
 }
 
-.contact-details {
-  background-color: #000000;
+.c0ontact-details {
+
   color: #fff;
   padding: 1.5rem 2rem;
   border-radius: 0 0 0.5rem 0.5rem;
   transform: translateY(-100%);
   transition: all 0.5s;
+  margin-top: 6%;
 }
 
 .contact-title {
@@ -684,7 +687,6 @@ font-weight: bold;
   
 }
 
-
 .email {
   transition: all 0.5s 0.3s;
 }
@@ -697,7 +699,10 @@ font-weight: bold;
   transition: all 0.5s 0.5s;
 }
 
-
+.img-margin {
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas de son conteneur */
+  height: auto; /* Permettez à la hauteur de l'image de s'ajuster automatiquement */
+}
 
 .contact-social span {
   margin-inline-start: auto;

@@ -535,7 +535,7 @@ font-weight: bold;
 /* contact */
 /* Reset CSS */
 
-
+/* section 4 */
 
 .contact-container {
   inline-size: 100%;
@@ -555,7 +555,7 @@ font-weight: bold;
   inline-size: 40rem;
   position: relative;
   margin-block-start: 37%;
-  left: 50%;
+  
 }
 
 .contact-bio {
@@ -933,7 +933,7 @@ font-weight: bold;
 .presentations{
     
   font-family: "Poppins", sans-serif;
-font-weight: 900;
+font-weight: 900px;
 font-style: italic;
   block-size: 132px;
   margin-block-start: 8%;
@@ -1011,13 +1011,12 @@ tr:nth-child(even) {
 .titrehoraire{
     
   font-family: "Poppins", sans-serif;
-  font-weight: 900px;
-  font-style: italic;
+font-weight: 900;
+font-style: italic;
   block-size: 132px;
   margin-block-start: -1%;
   margin-inline-start: 52%;
   color: #000000af;
-  font-weight: bold;
  
 }
 

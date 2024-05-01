@@ -122,9 +122,106 @@ sections.forEach(section => {
 
 // contact
 
-document.querySelector(".contact-btn").addEventListener("click", () => {
-  document.querySelector(".contact-card").classList.toggle("change");
-  document.querySelectorAll(".contact-social").forEach((social) => {
-    social.classList.toggle("show");
-  });
+$( '.js-input' ).keyup(function() {
+  if( $(this).val() ) {
+     $(this).addClass('not-empty');
+  } else {
+     $(this).removeClass('not-empty');
+  }
 });
+
+
+// recapcha
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Empêche le comportement de soumission du formulaire par défaut
+
+  // Affiche l'overlay
+  document.getElementById("overlay").style.display = "block";
+
+  // Affiche le reCAPTCHA
+  document.getElementById("recaptchaContainer").style.display = "block";
+});
+
+// Callback lorsque le reCAPTCHA est validé
+function onSubmit(token) {
+  // Cache l'overlay et le reCAPTCHA
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("recaptchaContainer").style.display = "none";
+  
+  // Soumet le formulaire
+  document.getElementById("myForm").submit();
+}
+
+// -----------------------------------------------------
+
+// e-mail valide
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Sélectionne le formulaire
+  const form = document.getElementById("myForm");
+
+  // Sélectionne le champ de l'e-mail
+  const emailInput = document.getElementById("email");
+
+  // Sélectionne l'overlay
+  const overlay = document.getElementById("overlay");
+
+  // Ajoute un écouteur d'événement pour la soumission du formulaire
+  form.addEventListener("submit", function(event) {
+    // Récupère la valeur de l'e-mail et retire les espaces blancs au début et à la fin
+    const emailValue = emailInput.value.trim();
+
+    // Vérifie si l'e-mail est valide en appelant la fonction isValidEmail
+    if (!isValidEmail(emailValue)) {
+      // Empêche la soumission du formulaire si l'e-mail n'est pas valide
+      event.preventDefault();
+      // Affiche une alerte demandant à l'utilisateur de saisir une adresse e-mail valide
+      alert("Veuillez entrer une adresse e-mail valide.");
+    }
+  });
+
+  // Fonction pour valider une adresse e-mail à l'aide d'une expression régulière
+  function isValidEmail(email) {
+    // Expression régulière pour valider l'e-mail
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Liste des domaines autorisés
+    const allowedDomains = ['gmail.com', 'sfr.fr', 'yahoo.com', 'orange.fr', 'free.fr']; // Ajoute d'autres domaines au besoin
+    
+    // Vérifie si l'adresse e-mail correspond au modèle et si le domaine est autorisé
+    if (emailPattern.test(email) && allowedDomains.some(domain => email.endsWith(domain))) {
+      // Affiche l'overlay seulement si l'e-mail est valide
+      overlay.style.display = "block";
+      return true;
+    } else {
+      // Cache l'overlay si l'e-mail n'est pas valide
+      overlay.style.display = "none";
+      return false;
+    }
+  }
+});
+
+// -----------------------------------------------------------
+
+window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('navbar');
+  if (window.scrollY > 0) { // 50 est la valeur de défilement à partir de laquelle la navbar descend
+      navbar.classList.add('fixed-top'); // Ajoutez la classe fixed-top pour fixer la navbar en haut
+  } else {
+      navbar.classList.remove('fixed-top'); // Supprimez la classe fixed-top lorsque la navbar est en haut de la page
+  }
+});
+
+
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    var section1 = document.getElementById('section1');
+
+    if (window.scrollY > section1.offsetHeight) { // Comparez le défilement avec la hauteur de la section 1
+        navbar.classList.add('scrolled'); // Ajoutez la classe scrolled pour changer la couleur du texte
+    } else {
+        navbar.classList.remove('scrolled'); // Supprimez la classe scrolled lorsque vous remontez à la section 1
+    }
+});
+
+

@@ -1,5 +1,11 @@
 <?php 
-require("database.inc.php");
+require("database.inc.php"); // Inclure d'autres fichiers nécessaires
+
+// Inclure le fichier injsql.php pour prévenir les injections SQL
+require("./PHP/injsql.php");
+
+// Inclure le fichier xss.php pour prévenir les attaques XSS
+require("./PHP/xss.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +13,7 @@ require("database.inc.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css">
+     <link rel="stylesheet" href="./sass/styles.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -16,24 +23,53 @@ require("database.inc.php");
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <script src="https://www.google.com/recaptcha/api.js?render=6LejIMopAAAAAE_V90VZU_EjdfWFNBn4o5AHwYBb" async defer></script>
+
   <link rel="stylesheet" href="./CSS/media.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./favicon.ico">
-    
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Document</title>
 </head>
 <body>
 
+ <header>
+ </header>
 
- 
 
 <section class="section1" id="section1">
-
-
-    
-    
-
-</h1>
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">Mes services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section3">Gallerie</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section4">Contact & Avis</a>
+              </li>
+                <li class="nav-item dropdown">
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Acceuil</a></li>
+                        <li><a class="dropdown-item" href="#section2">Mes services</a></li>
+                        <li><a class="dropdown-item" href="#section3">Gallerie</a></li>
+                        <li><a class="dropdown-item" href="#section4">Contact & Avis</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 </section>
 <section class="section1bis">
   <div class="container">
@@ -187,7 +223,7 @@ Dans le domaine de la détection et de la réparation de fuites, je suis votre p
 </section>
 
 
-<section class="section3">
+<section class="section3" id="section3">
   
 
     <h1 class="h1gallery">Gallerie</h1>
@@ -254,142 +290,113 @@ Dans le domaine de la détection et de la réparation de fuites, je suis votre p
       <span class="close">&times;</span>
       <img class="modal-content" id="img01">
     </div>
-    <hr class="hrimage">
+   
 
 </section>
 
 
-<section class="section4">
-  
-  <div class="s4">
-  <div class="container">
-    <div class="h1ethr">
-    <h1 class="h1contact">Contact et Horraires</h1>
-    <hr class="hrcontact">
-  </div>
-
-  <div class="titrepage container-fluid ">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="presentations"  >
-          Qui suis-je ?
-          <hr class="hrhead" style="color: brown;"> 
-        </h1>
-      </div>
-    </div>
-    <div class="row">
-      
-        <p class="présentations1" style="inline-size: 50%; margin-top: -3%;">
-        
-
-          Avec des années passées dans le domaine, j'ai acquis une expertise solide en plomberie et chauffage. <br><br> En 2013, j'ai lancé ma propre entreprise pour offrir directement mes services aux clients, capitalisant sur mon expérience et mon savoir-faire. <br><br>C'est le fruit de nombreuses années d'apprentissage et de travail, me permettant maintenant d'offrir le meilleur service à mes clients.
-
-
-
-
-
-
-
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="contact-container">
-      <div class="contact-card">
-        <div class="contact-bio">
-          <div class="contact-img-wrapper">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg" alt="Person" />
-          </div>
-          <div class="contact-info">
-            <h3 class="contact-name">Leclercq Philippe</h3>
-            <p class="contact-description" style="font-size: 23px;">Plombier Chauffagiste</p>
-          </div>
-          <button class="contact-btn" id="btn1">
-            <span class="contact-btn-text">Me contacter</span>
-            <i class="fas fa-angle-up"></i>
-          </button>
-        </div>
-        <div class="c0ontact-details">
-        </div>
-        <div class="contact-social email">
-          <div class="icon-wrapper">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-detail">
-            <h4>Email</h4>
-            <p style="font-size: 18px;">Philippe.leclercq36@gmail.com</p>
-            <a href="mailto:janebrown@gmail.com" class="btn3">Envoyer un e-mail</a>
-          </div>
-        </div>
-        <div class="contact-social phone">
-          <div class="icon-wrapper">
-            <i class="fas fa-phone"></i>
-          </div>
-          <div class="contact-detail">
-            <h4>Téléphone</h4>
-            <p style="font-size: 18px;">06 13 24 13 64</p>
-            <a href="tel:0613241364" class="btn2">Appeler</a>
-          </div>
-        </div>
-        <div class="contact-social facebook">
-          <div class="icon-wrapper">
-            <i class="fab fa-facebook-square"></i>
-          </div>
-          <div class="contact-detail">
-            <h4>Facebook</h4>
-            <p style="font-size: 18px;">Leclercq Philippe</p>
-            <a href="https://www.facebook.com/philippeleclercq2013" class="btn4">Voir la page</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="titrehoraire">
-      <h1 class="horaires">Mes Horaires</h1>
-      <hr class="hrhorraire" style="color: brown;">
-    </div>
-    <div class="card" style="height: 320px; overflow: hidden;">
-      <table>
-        <tr>
-          <th>Jour</th>
-          <th>Heures</th>
-        </tr>
-        <tr>
-          <td>Lundi</td>
-          <td>9h - 18h</td>
-        </tr>
-        <tr>
-          <td>Mardi</td>
-          <td>9h - 18h</td>
-        </tr>
-        <tr>
-          <td>Mercredi</td>
-          <td>9h - 18h</td>
-        </tr>
-        <tr>
-          <td>Jeudi</td>
-          <td>9h - 18h</td>
-        </tr>
-        <tr>
-          <td>Vendredi</td>
-          <td>9h - 18h</td>
-        </tr>
-        <tr>
-          <td>Samedi</td>
-          <td>Fermé</td>
-        </tr>
-        <tr>
-          <td>Dimanche</td>
-          <td>Fermé</td>
-        </tr>
-      </table>
-    </div>
-  </div>
+<section class="section4" id="section4">
+<div class="titreavis">
+<h1 >Contact et Avis</h1>
+<hr class="hravis">
 </div>
+  <div class="contact-icons-container">
+    <div class="contact-box">
+      <div class="contact-icon">
+        <a href="https://www.facebook.com/philippeleclercq2013"><i class="fab fa-facebook" style="color: rgba(252, 252, 252, 0.74);"></i></a>
+        <h4>Facebook</h4>
+        <h3>Leclercq Philippe</h3>
+      </div>
+      <div class="contact-icon">
+        <a href="tel:0613241364"><i class="fas fa-phone"style="color: rgba(252, 252, 252, 0.74);"></i></a>
+        <h4>Mobile</h4>
+        <h3>06 13 24 13 64</h3>
+      </div>
+      <div class="contact-icon">
+        <a href="mailto:Philippe.leclercq36@sfr.fr"><i class="far fa-envelope"style="color: rgba(252, 252, 252, 0.74);;"></i></a>
+        <h4>Email</h4>
+        <h3>Philippe.leclercq36@sfr.fr</h3>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+
+
+
+  
+
+
+  <section class="section-avis">
+  <div class="content-wrapper">
+    <div class="conteneur">
+      <h1 class="avis">Donnez-nous votre expérience</h1>
+      <form id="myForm" class="contact-form custom-grid" action="./PHP/plomberie.php" method="POST">
+        <div class="form-field col x-50 grid-item">
+          <input id="firstname" class="input-text js-input" style="background-color: transparent;" type="text" name="firstname"  required>
+          <label class="label" for="firstname">Prénom</label>
+        </div>
+        <div class="form-field col x-50 grid-item">
+          <input id="lastname" class="input-text js-input" style="background-color: transparent;" type="text" name="lastname" required>
+          <label class="label" for="lastname">Nom</label>
+        </div>
+        <div class="form-field col x-100">
+          <input id="email" class="input-text js-input" style="background-color: transparent;" type="email" name="email" required>
+          <label class="label"for="email">E-mail</label>
+        </div>
+        <div class="form-field col x-100">
+          <input id="comment" class="input-text js-input" style="background-color: transparent;" type="text" name="comment"  required>
+          <label class="label" for="comment">Votre avis</label>
+        </div>
+        <div class="form-field col x-100">
+          <label class="labelnote" for="rating">Note :</label>
+          <div class="rating">
+            <input value="5" name="rating" id="star5" type="radio">
+            <label for="star5"></label>
+            <input value="4" name="rating" id="star4" type="radio">
+            <label for="star4"></label>
+            <input value="3" name="rating" id="star3" type="radio">
+            <label for="star3"></label>
+            <input value="2" name="rating" id="star2" type="radio">
+            <label for="star2"></label>
+            <input value="1" name="rating" id="star1" type="radio">
+            <label for="star1"></label>
+          </div>
+        </div>
+        <div class="form-field col x-100 align-center">
+          <button class="Btn" id="submitButton" type="submit">
+            <svg class="svgIcon" viewBox="0 0 512 512" height="1.2em"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></svg>
+            Envoyer
+          </button>
+          <div id="overlay" class="overlay">
+            <div id="recaptchaContainer" style="display: none;">
+                <div class="g-recaptcha" data-sitekey="6LejIMopAAAAAE_V90VZU_EjdfWFNBn4o5AHwYBb" data-callback="onSubmit"></div>
+            </div>
+        </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div id="notes">
+  <div class="form-container">
+    <h1 class="experiences">Avis clients</h1>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+      <?php include './PHP/avis.php'; ?>
 </section>
 
+
+
+
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

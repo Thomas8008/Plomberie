@@ -131,6 +131,18 @@ $( '.js-input' ).keyup(function() {
 });
 
 
+  document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".button");
+    buttons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        var link = this.querySelector("a").getAttribute("href");
+        window.open(link, "_blank");
+      });
+    });
+  });
+
+
+
 // recapcha
 document.getElementById("myForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Empêche le comportement de soumission du formulaire par défaut
@@ -205,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener('scroll', function() {
   var navbar = document.getElementById('navbar');
-  if (window.scrollY > 0) { // 50 est la valeur de défilement à partir de laquelle la navbar descend
+  if (window.scrollY > 1000) { // 50 est la valeur de défilement à partir de laquelle la navbar descend
       navbar.classList.add('fixed-top'); // Ajoutez la classe fixed-top pour fixer la navbar en haut
   } else {
       navbar.classList.remove('fixed-top'); // Supprimez la classe fixed-top lorsque la navbar est en haut de la page
@@ -223,5 +235,28 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled'); // Supprimez la classe scrolled lorsque vous remontez à la section 1
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var dropdownLinks = document.querySelectorAll('.dropdown-item[href^="#"]');
+  dropdownLinks.forEach(function(link) {
+      link.addEventListener('click', function(event) {
+          event.preventDefault();
+          var targetId = this.getAttribute('href').substring(1);
+          var targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              var offsetTop = targetElement.offsetTop;
+              var navbarHeight = document.getElementById('navbar').offsetHeight;
+              var windowHeight = window.innerHeight;
+              var scrollToPosition = offsetTop - (windowHeight - targetElement.offsetHeight) / 2 - navbarHeight;
+              window.scrollTo({
+                  top: scrollToPosition,
+                  behavior: 'smooth'
+              });
+          }
+      });
+  });
+});
+
+
 
 

@@ -12,7 +12,7 @@ require("./PHP/xss.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/styles.css">
      <link rel="stylesheet" href="./sass/styles.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -49,9 +49,18 @@ require("./PHP/xss.php");
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section2">Mes services</a>
-                </li>
+                <li class="nav-item dropdown"> <!-- Ajout de la classe dropdown -->
+                  <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Mes services <!-- Changement de lien -->
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#pose">Pose & raccordement</a></li> <!-- Liens du dropdown -->
+                      <li><a class="dropdown-item" href="#sdb">Salle de bain</a></li>
+                      <li><a class="dropdown-item" href="#wc">WC</a></li>
+                      <li><a class="dropdown-item" href="#chaudiere">Chaudiere</a></li>
+                      <li><a class="dropdown-item" href="#fuites">Fuites</a></li>
+                  </ul>
+              </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#section3">Gallerie</a>
                 </li>
@@ -70,6 +79,22 @@ require("./PHP/xss.php");
         </div>
     </div>
 </nav>
+
+<div class="container">
+  <div class="content">
+    <h1>Leclercq Philippe</h1>
+    <div class="description">
+      <p>Plombier chauffagiste</p>
+      <div class="buttons">
+        <button class="button btn-contact">Me contacter</button>
+        <button class="button btn-services">Voir mes services</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </section>
 <section class="section1bis">
   <div class="container">
@@ -117,7 +142,6 @@ require("./PHP/xss.php");
     </div>
   </div>
 
-  <Hr class="hr1">
 </section>
 
 
@@ -130,7 +154,7 @@ require("./PHP/xss.php");
     </h1>
     <!-- Première section -->
     <div class="row row-margin">
-      <div class="col-md-6 column-margin">
+      <div class="col-md-6 column-margin" id="pose">
         <div class="paragraphe1 animate__animated left-column hidden" id="leftColumn1">
           <h1 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-style: italic; font-size: 19px; " class="text-margin">Pose et raccordement de Réseaux d'Eau , Chauffage et Gaz</h1>
           <hr class="divider-margin">
@@ -147,7 +171,7 @@ require("./PHP/xss.php");
     </div>
 
     <!-- Deuxième section -->
-    <div class="row row-margin1">
+    <div class="row row-margin1" id="sdb">
       <div class="col-md-6 column-margin">
         <div class="text-center animate__animated hidden" id="leftColumn2">
           <img class="img-fluid" src="./img/retro-bathroom-authentic-interior-design.jpg" alt="Votre Image" class="img-fluid image-margin1" style="inline-size: 600px; block-size: 270px;">
@@ -165,7 +189,7 @@ require("./PHP/xss.php");
     </div>
 
     <!-- Troisième section -->
-    <div class="row row-margin">
+    <div class="row row-margin" id="wc">
       <div class="col-md-6 column-margin">
         <div class="animate__animated left-column hidden" id="leftColumn3">
           <h1 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-style: italic; font-size: 19px;" class="text-margin">Debouchage et pose WC</h1>
@@ -183,7 +207,7 @@ Dans le domaine du débouchage et de la pose de WC, je suis spécialisé dans la
     </div>
 
     <!-- Quatrième section -->
-    <div class="row row-margin1">
+    <div class="row row-margin1" id="chaudiere">
       <div class="col-md-6 column-margin">
         <div class="text-center animate__animated hidden" id="leftColumn4">
           <img class="img-fluid"  src="./img/worker-repairing-water-heater.jpg" alt="Votre Image" class="img-fluid image-margin1" style="inline-size: 600px; block-size: 270px;">
@@ -202,7 +226,7 @@ En tant que professionnel de l'entretien de chaudières à gaz et à fioul, je m
     </div>
 
     <!-- Cinquième section -->
-    <div class="row row-margin">
+    <div class="row row-margin" id="fuites">
       <div class="col-md-6 column-margin">
         <div class="animate__animated left-column hidden" id="leftColumn5">
           <h1 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-style: italic; font-size: 19px;" class="text-margin">Détection et Réparations de Fuites</h1>
@@ -296,29 +320,35 @@ Dans le domaine de la détection et de la réparation de fuites, je suis votre p
 
 
 <section class="section4" id="section4">
-<div class="titreavis">
-<h1 >Contact et Avis</h1>
-<hr class="hravis">
-</div>
-  <div class="contact-icons-container">
-    <div class="contact-box">
-      <div class="contact-icon">
-        <a href="https://www.facebook.com/philippeleclercq2013"><i class="fab fa-facebook" style="color: rgba(252, 252, 252, 0.74);"></i></a>
-        <h4>Facebook</h4>
-        <h3>Leclercq Philippe</h3>
-      </div>
-      <div class="contact-icon">
-        <a href="tel:0613241364"><i class="fas fa-phone"style="color: rgba(252, 252, 252, 0.74);"></i></a>
-        <h4>Mobile</h4>
-        <h3>06 13 24 13 64</h3>
-      </div>
-      <div class="contact-icon">
-        <a href="mailto:Philippe.leclercq36@sfr.fr"><i class="far fa-envelope"style="color: rgba(252, 252, 252, 0.74);;"></i></a>
-        <h4>Email</h4>
-        <h3>Philippe.leclercq36@sfr.fr</h3>
+  <div class="titreavis">
+  <h1 >Contact et Avis</h1>
+  <hr class="hravis">
+  </div>
+    <div class="contact-icons-container">
+      <div class="contact-box">
+        <div class="contact-icon">
+          <a href="https://www.facebook.com/philippeleclercq2013"><i class="fab fa-facebook" style="color: rgba(252, 252, 252, 0.74);"></i></a>
+          <h4>Facebook</h4>
+          <h3>Leclercq Philippe</h3>
+        </div>
+        <div class="contact-icon">
+          <a href="tel:0613241364"><i class="fas fa-phone"style="color: rgba(252, 252, 252, 0.74);"></i></a>
+          <h4>Mobile</h4>
+          <h3>06 13 24 13 64</h3>
+        </div>
+        <div class="contact-icon">
+          <a href="mailto:Philippe.leclercq36@sfr.fr"><i class="far fa-envelope"style="color: rgba(252, 252, 252, 0.74);;"></i></a>
+          <h4>Email</h4>
+          <h3>Philippe.leclercq36@sfr.fr</h3>
+        </div>
       </div>
     </div>
-  </div>
+  
+  
+
+  
+
+  
   
   
   

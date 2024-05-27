@@ -51,6 +51,7 @@ body {
 
 
   
+  
 /* Navbar*/
 
 .navbar {
@@ -79,7 +80,7 @@ body {
   display: block;
   width: 0;
   height: 2px; /* Épaisseur de la ligne */
-  background-color: brown; /* Couleur de la ligne */
+  background-color: brown !important; /* Couleur de la ligne */
   transition: width 0.3s; /* Transition pour un effet fluide */
 }
 
@@ -136,80 +137,84 @@ body {
 
   
 
-.pourquoi{
-
-  margin-block-start: 2%;
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  color: rgb(51, 51, 51);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hrapropos{
- color: rgb(110, 62, 28); /* Arrière-plan marron subtil */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  inline-size: 14%;
-margin-inline-start: 43%;
-
-border-width: 2px;
-font-weight: bold;
-  
-}
-.text-icons{
-  white-space: nowrap;
-  margin-inline-start: 5%;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 14px;
-  margin-inline-start: -5%;
-}
-
-.img4 , .img2{
-  margin-inline-start: -70%;
-}
-
-.img1 , .img3{
-  margin-inline-start: -20%;
-}
-
 
 
 .section1 {
 
-  block-size: 700px;
+  block-size: 900px;
   padding-block-start: 1%;
   background-image: url(../img/2305.w064.n002.147B.p1.147.jpg);
   background-repeat: no-repeat;
   background-size: 100% 70%;
   background-attachment: scroll;
-  background-attachment: fixed; 
+
   
  
 }
 
 
+.content {
+  text-align: center;
+  margin-top: 15%;
+  color: rgb(177, 175, 169);
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-weight: bold;
+}
 
-.hr1{
-  inline-size: 84%;
-  margin-block-start: 8ch;
-margin-inline-start: 10%;
-color: #000000;
-border-width: 4px;
-font-weight: bold;
+.btn-contact, .btn-services {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.btn-contact::after, .btn-services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.btn-contact:hover, .btn-services:hover {
+  color: #ffffff;
+  border: none;
+}
+
+.btn-contact:hover::after, .btn-services:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
 }
 
 /* section1bis */
 /* Styles spécifiques à la section */
 .section1bis {
-  
   padding: 0px 0;
   block-size: 600px;
+}
+
+.pourquoi{
+  margin-top: -18%;
 }
 
 /* Grille d'icônes */
@@ -364,6 +369,13 @@ font-weight: bold;
 .image-margin1 {
   margin-inline-start: -80px;
 }
+
+.img-fluid{
+  border-radius: 20% 0% 20% 0%;
+  box-shadow: #ff0000;
+  
+}
+
 
 /* section 3 */
 
@@ -848,6 +860,7 @@ left: 33%;
 
 /* icones contact */
 
+
 .contact-icons-container {
   width: 100%; /* Utilisation de la largeur disponible */
   margin: 0 auto;
@@ -910,6 +923,9 @@ left: 33%;
 .contact-icons-container .contact-icon:hover .fab {
   transform: scale(1.1); /* Augmente la taille de l'icône de 20% */
 }
+
+
+
 
 .titreavis{
   display: flex;

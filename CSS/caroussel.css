@@ -1,0 +1,105 @@
+/* General styles */
+#notes {
+    padding: 5rem 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#notes .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#notes .form-container {
+    text-align: center;
+}
+
+#notes .experiences {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+#notes #myCarousel {
+    position: relative;
+}
+
+#notes .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#notes .carousel-item {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.5s ease;
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 200px; /* Minimum height for consistency */
+}
+
+#notes .carousel-item.active {
+    display: flex;
+}
+
+#notes .review-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#note .client-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+#note .client-rating {
+    font-size: 1.2em;
+    color: #ff9800;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out 0.3s forwards;
+}
+
+#note .client-comment {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+    word-wrap: break-word; /* Ensure long words break to the next line */
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out 0.6s forwards;
+    overflow: visible; /* Ensure all content is visible */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+

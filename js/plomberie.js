@@ -131,6 +131,7 @@ $( '.js-input' ).keyup(function() {
 });
 
 
+
   document.addEventListener("DOMContentLoaded", function() {
     var buttons = document.querySelectorAll(".button");
     buttons.forEach(function(button) {

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulaire de devis</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f8;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Demander un devis</h2>
+    <form id="devisForm">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone">
+      </div>
+      <div class="form-group">
+        <label for="description">Description de la panne</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="photo">Photo (optionnel)</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </div>
+      <div class="form-group">
+        <button type="submit">Envoyer le devis</button>
+      </div>
+    </form>
+  </div>
+  <script>
+  const form = document.getElementById('devisForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    const response = await fetch('/send-devis', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    form.reset();
+  });
+</script>
+
+
+</body>
+</html>
